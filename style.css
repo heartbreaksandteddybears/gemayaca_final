@@ -9,7 +9,7 @@
     border: 0px solid black;
     background-color: white;;
     border-radius: 5px;
-    padding: 10px;
+    padding: 5px;
 }
 
 .main-head {
@@ -19,6 +19,7 @@
     color: white;
     text-align: center;
     background-image: url("marblebackground.jpg");
+    justify-content: center;
 }
 .content{
     grid-area:content;
@@ -28,7 +29,7 @@
     grid-area: nav;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     list-style-type: none;
-    background-image: url("marblebackground.jpg");
+    background:transparent;
 }
 .side {
     grid-area:sidebar;
@@ -44,10 +45,35 @@
 
 h1 {
     text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
+
+h2 {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+    font-size: 1em;
+}
+
+p{
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.form{
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    size: 200%;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+  }
 /* nav bar styling */
 .main-nav {
-    background-color:white;
+    background:transparent;
     overflow: hidden;
   }
   
@@ -82,18 +108,19 @@ h1 {
     "header"
     "nav"
     "content"
-    "sidebar"
     "ad"
     "footer";
 }
-
+    nav ul{
+        list-style-type: none;
+    }
 @media (min-width:500px){
     .wrapper{
         grid-template-columns: 1fr 3fr;
         grid-template-areas: 
         "header header"
         "nav nav"
-        "sidebar content"
+        "content content"
         "footer footer";
     }
     nav ul{
