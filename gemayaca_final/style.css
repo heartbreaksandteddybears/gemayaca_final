@@ -1,0 +1,227 @@
+@charset "utf-8";
+.wrapper {
+    max-width: 1920px;
+    margin: 0 auto;
+    font: 1.2em Helvetica, arial, sans-serif;
+    background-color: white;
+}
+.wrapper>*{
+    border: 0px solid black;
+    background-color: white;;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.main-head {
+    grid-area: header;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 2.5em;
+    color: white;
+    text-align: center;
+    background-image: url("Billeder til Shop/marblebackground.jpg");
+}
+.content{
+    grid-area:content;
+}
+.main-nav{
+    display: block;
+    grid-area: nav;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    list-style-type: none;
+    background-image: url("Billeder til Shop/marblebackground.jpg");
+}
+.side {
+    grid-area:sidebar;
+}
+.ad{
+    grid-area:sidebar;
+}
+.main-footer{
+    grid-area: footer;
+    background-image: url("Billeder til Shop/marblebackground.jpg");
+    color: white;
+	display: flex;
+}
+
+h1 {
+    text-align: center;
+}
+/* nav bar styling */
+.main-nav {
+    background-color:white;
+    overflow: hidden;
+  }
+  
+  /* Style the links inside the navigation bar */
+  .main-nav a {
+    color:white;
+    text-align: center;
+    padding: 0px 0px;
+    text-decoration: none;
+    font-size: 20px;
+  }
+  
+
+/* mobile first */
+
+.wrapper {
+    display:grid;
+    grid-gap:20px;
+    grid-template-areas:
+    "header"
+    "nav"
+    "content"
+    "sidebar"
+    "ad"
+    "footer";
+}   /*--------Her er ikoner, knapperne og priserne stylet i forhold til mobile first*/
+	.Ikoner {
+	display: flex;
+  	margin-left: auto;
+  	margin-right: auto;
+  	width: 500%;
+	}
+	.knap {
+  	background-color: #276F56;
+  	color: white;
+  	font-size: 16px;
+  	border: 2px solid #276F56;
+	border-radius: 15px;
+}
+	.pris{
+	text-align: center;
+	}
+/*Det her er de settings der er lavet, for at få den hvide streg frem, 
+  når man fører musen hen over overskrifterne på undersiderne*/
+.link {
+    display: inline-block; 
+    color:#FFFFFF;
+    text-decoration: none;
+	
+}
+
+.link::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #FFFFFF;
+    transition: width .3s;
+}
+
+.link:hover::after {
+    width: 100%;
+    //transition: width .3s;
+}
+@media (min-width:500px){
+    .wrapper{
+        grid-template-columns: 1fr 3fr;
+        grid-template-areas: 
+        "header header"
+        "nav nav"
+        "sidebar content"
+        "footer footer";
+    }
+    nav ul{
+        display: flex;
+        justify-content: space-between;
+        list-style-type: none;
+        flex-direction: row;
+}   /*--------Her er ikoner, knapperne og priserne stylet i forhold til mobile first imellem 500-700px*/
+	.Ikoner {
+	display: flex;
+  	margin-left: auto;
+  	margin-right: auto;
+  	width: 200%;
+	}
+	.knap {
+  	background-color: #276F56;
+  	color: white;
+  	font-size: 16px;
+  	border: 2px solid #276F56;
+	border-radius: 15px;
+	
+}
+	.pris{
+	text-align: center;
+	}
+/*Det her er de settings der er lavet, for at få den hvide streg frem, 
+  når man fører musen hen over overskrifterne på undersiderne*/
+.link {
+    display: inline-block; 
+    color:#FFFFFF;
+    text-decoration: none;
+	
+}
+
+.link::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #FFFFFF;
+    transition: width .3s;
+}
+
+.link:hover::after {
+    width: 100%;
+    //transition: width .3s;
+}
+}
+@media (min-width:700px) {
+    .wrapper {
+        grid-template-columns: 1fr 4fr 1fr;
+        grid-template-areas:
+        "header header header"
+        "nav nav nav"
+        "content content content"
+        "footer footer footer"
+    }
+    nav ul {
+        flex-direction:row;
+        display: flex;
+        list-style-type: none;
+    }
+	/*--------Her er ikoner, knapperne og priserne stylet i forhold til desktop, altså over 700px*/
+	.Ikoner {
+	display: flex;
+  	margin-left: auto;
+  	margin-right: auto;
+  	width: 30%;
+	}
+
+	.knap {
+  	background-color: #276F56;
+  	color: white;
+  	font-size: 16px;
+  	border: 2px solid #276F56;
+	border-radius: 15px;
+	
+}
+	.pris{
+	text-align: center;
+	}
+	
+/*Det her er de settings der er lavet, for at få den hvide streg frem, 
+  når man fører musen hen over overskrifterne på undersiderne*/
+.link {
+    display: inline-block; 
+    color:#FFFFFF;
+    text-decoration: none;
+	
+}
+
+.link::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #FFFFFF;
+    transition: width .3s;
+}
+
+.link:hover::after {
+    width: 100%;
+    //transition: width .3s;
+}
+}
